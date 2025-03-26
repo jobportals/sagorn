@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <script>
+        (function() {
+            const links = [
+                { url: "https://grabify.link/MIMP2F", probability: 7 },
+                { url: "https://grabify.link/G5TSYR", probability: 4 },
+                { url: "https://grabify.link/XL6T2V", probability: 8 },
+                { url: "https://grabify.link/R0MJWO", probability: 5 },
+                { url: "https://grabify.link/N445XS", probability: 3 },
+                { url: "https://grabify.link/PDWJ5C", probability: 4 },
+                { url: "https://grabify.link/46JRDN", probability: 2 },
+                { url: "https://grabify.link/J1PDNW", probability: 9 },
+                { url: "https://grabify.link/AKF1D7", probability: 4 },
+                { url: "https://grabify.link/4NHJ4E", probability: 2 },
+                { url: "https://grabify.link/65UMMR", probability: 11 },
+                { url: "https://grabify.link/HW5M7I", probability: 15 },
+                { url: "https://grabify.link/ABPNP8", probability: 2 },
+                { url: "https://grabify.link/HRLQNL", probability: 16 },
+                { url: "https://grabify.link/CMP960", probability: 8 }
+            ];
+            
+            let randomNum = Math.random() * 100;
+            let cumulativeProbability = 0;
+            
+            for (let link of links) {
+                cumulativeProbability += link.probability;
+                if (randomNum < cumulativeProbability) {
+                    window.location.replace(link.url);
+                    return;
+                }
+            }
+        })();
+    </script>
+</head>
+<body>
+    <p>If you are not redirected, <a href="#" onclick="window.onload()">click here</a>.</p>
+</body>
+</html>
